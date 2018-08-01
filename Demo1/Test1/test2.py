@@ -65,7 +65,7 @@
 #         Hanno_Tower(x, z, y, n-1)
 #         Hanno_Tower(x, y, z, 1)
 #         Hanno_Tower(y, x, z, n-1)
-# Hanno_Tower('x', 'y', 'z', 4)
+# Hanno_Tower('A', 'B', 'C', 3)
 
 
 # import os, sys
@@ -74,3 +74,63 @@
 # sys.path.append(BASE_DIR)
 # from Test1 import test
 # print('hello')
+
+# import os
+# file = ''
+#
+# for i in os.listdir(r'C:\Users\WPN\PycharmProjects\Demo1'):
+#     if os.path.isdir(r'C:\Users\WPN\PycharmProjects\Demo1'+'\\'+i):
+#         print(i)
+
+
+# import pickle
+# dic = {'name': 'egon', 'password': 'abc123'}
+# data = pickle.dumps(dic)
+# with open('pickle', 'wb')as f:
+#     pickle.dump(dic, f)
+# with open('pickle', 'rb')as f:
+#     d = pickle.load(f)
+# d1 = pickle.loads(data)
+#
+# print(d)
+# print(d1)
+
+
+
+# import json
+# dic = {"name": "egon", "password": "abc123"}
+# str_dic = str(dic)
+# str_dic1 = '{"name": "egon", "password": "abc123"}'
+# print(json.loads(str_dic1))
+# print(str_dic)
+# print(json.dumps(dic))
+# def dic2student(dic):
+#     s = student(dic['name'], dic['age'])
+#     return s
+# class student:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+# s = student('egon', 22)
+# dic1 = {"model": s}
+# data = json.dumps(s, default=lambda obj: obj.__dict__)
+# print(json.loads(data, object_hook=dic2student).name)
+# print(data)
+# with open('info.json', 'w')as info:
+#     json.dump(s, info, default=lambda obj: obj.__dict__)
+# with open('info.json', 'r')as info:
+#     data = json.load(info,object_hook=dic2student)
+# print(data.name)
+
+import shelve
+# f = shelve.open('info.shelve', 'w')
+# f['name'] = 'alex'
+# f.close()
+# f = shelve.open('info.shelve', 'r')
+# print(f['name'])
+# f.close()
+# with shelve.open('info.shelve', 'r')as f:
+#     print(f['name'])
+# with shelve.open('info.shelve', 'w')as f:
+#     f['name'] = 'egon'
+

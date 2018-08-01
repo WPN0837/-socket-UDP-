@@ -263,3 +263,34 @@ abaaab
 # def foo(x, y, z):
 #     print(x, y, z)
 # foo(1, *(1, 2, 3)[0:2])
+
+
+# 函数嵌套
+# from math import pi
+# def cirle(choice = 0):
+#     def area(r):
+#         return pi * r * r
+#     def zhouchang(r):
+#         return 2 * pi * r
+#     if choice == 0:
+#         return area
+#     elif choice == 1:
+#         return zhouchang
+#     else:
+#         return None
+#
+# print(cirle(1)(3))
+
+
+
+# l = [1,2,3]
+# print(max(l))
+
+
+# import datetime
+# d = datetime.datetime.now()
+# print(d)
+# print(d.timestamp())
+# print(d.timetuple())
+# print(datetime.date.fromtimestamp(d.timestamp()))
+

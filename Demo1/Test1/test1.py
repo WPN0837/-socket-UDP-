@@ -99,6 +99,7 @@
 # def dec1(func):#装饰器1  参数为被装饰的函数func
 #     print('dec1', func.__name__)#打印装饰器的名字及被装饰的函数名
 #     def wrapper1(*args, **kwargs):
+#         print('dec1', func.__name__)  # 打印装饰器的名字及被装饰的函数名
 #         start_time = time.time()
 #         func(*args, **kwargs)#可同时传入多个参数，是具体函数而定
 #         end_time = time.time()
@@ -108,6 +109,7 @@
 # def dec2(func):#装饰器2
 #     print('dec2', func.__name__)
 #     def wrapper2(*args, **kwargs):
+#         print('dec2', func.__name__)
 #         start_time = time.time()
 #         func(*args, **kwargs)#可同时传入多个参数，是具体函数而定
 #         end_time = time.time()
@@ -117,6 +119,7 @@
 # def dec3(func):#装饰器3
 #     print('dec3', func.__name__)
 #     def wrapper3(*args, **kwargs):
+#         print('dec3', func.__name__)
 #         start_time = time.time()
 #         func(*args, **kwargs)#可同时传入多个参数，是具体函数而定
 #         end_time = time.time()
@@ -128,6 +131,7 @@
 # @dec3
 # def func(a, b):#函数func，同时被3个装饰器装饰
 #     print(a, b)
+# func(1,2)
 #
 #
 # @dec2

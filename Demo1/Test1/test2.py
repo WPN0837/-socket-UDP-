@@ -267,3 +267,128 @@
 # # student.set_age = MethodType(set_age, student)
 # # s.sex = 'man'
 # # print(s.sex)
+
+
+# 类的继承
+# class Foo:
+#     __name = 'Foo'
+#     def __f1(self):
+#         print('Foo_f1')
+#     def f2(self):
+#         print('Foo_f2')
+#         self.__f1()
+# class Foo1():
+#     def __f1(self):
+#         print('Foo1_f1')
+#     def f2(self):
+#         print('Foo1_f2')
+#         self.__f1()
+# class Foo2(Foo1):
+#     def __f1(self):
+#         print('Foo2_f1')
+#     def f2(self):
+#         print('Foo2_f2')
+#         self.__f1()
+# class Foo3(Foo2, Foo1):
+#     # def __f1(self):
+#     #     print('Foo3_f1')
+#     # def f2(self):
+#     #     print('Foo3_f2')
+#     #     self.__f1()
+#     pass
+# class Foo4(Foo3):
+#     def __f1(self):
+#         print('Foo4_f1')
+#     def f2(self):
+#         print('Foo4_f2')
+#         self.__f1()
+#     pass
+# f = Foo()
+# print(Foo4.mro())
+# f.f2()
+# print(f._Foo__name)
+# class Foo1(Foo,Foo2):
+#     def f1(self):
+#         print('Foo1_f1')
+#         super().f1()
+# print(Foo1.mro())
+# F = Foo1()
+# F.f1()
+
+#抽象类
+# import abc
+# class A(metaclass = abc.ABCMeta):
+#     name = 'A'
+#     @abc.abstractmethod
+#     def call(self):
+#         pass
+#     @abc.abstractmethod
+#     def get_name(self):
+#         pass
+#     @abc.abstractmethod
+#     def put(self):
+#         print('AAAA')
+# class B(A):
+#     name = 'B'
+#     def call(self):
+#         print('this is B')
+#     def get_name(self):
+#         print(self.name)
+#     def p(self):
+#         print(super().name)
+#     def put(self):
+#         print('AAAA')
+# b = B()
+# b.p()
+# b.get_name()
+# b.put()
+
+
+
+# class Foo:
+#     __name = 'Foo'
+#     # def __init__(self):
+#     #     self.__name = 'Foo'
+#     def __f1(self):
+#         print('Foo_f1')
+#     @property
+#     def f2(self):
+#         return self.__name
+#     @f2.setter
+#     def f2(self, value):
+#         self.__name = value
+#     @f2.getter
+#     def f2(self):
+#         return self.__name
+#     @f2.deleter
+#     def f2(self):
+#         del self.__name
+# f = Foo()
+# print(f.f2)
+# print(Foo._Foo__name)
+# f.f2 = 'new'
+# print(f.f2)
+# print(Foo._Foo__name)
+# f.name = 'new name'
+# print(f.name)
+# def put():
+#     print('hello')
+# f.put = put
+# f.put()
+# print(Foo().f2)
+# del f.f2
+# print(f.f2)
+
+
+
+class Foo:
+    name = 'Foo'
+    def set(self):
+        self.name = 'new Foo'
+    def put(self):
+        print(self.name)
+f = Foo()
+f.set()
+Foo.put(f)
+print(dir(Foo))
+print(Foo.__dict__)

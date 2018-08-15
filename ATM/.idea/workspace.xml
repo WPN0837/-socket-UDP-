@@ -59,16 +59,6 @@
               <item name="ATM" type="b2602c69:ProjectViewProjectNode" />
               <item name="ATM" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ATM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ATM" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ATM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ATM" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -77,7 +67,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ATM_new" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>

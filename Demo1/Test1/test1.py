@@ -208,42 +208,42 @@ abaaab
 
 
 
-# import time
-# import codecs
-# import os
-# root = r"C:\Users\WPN\PycharmProjects\ATM"#root代表你放作业的文件夹
-# list1=[]
-# dict_time={}
-# timeset={}
-# dict_code={}
-# dict_time_code={}
-# def TimeStampToTime(timestamp):
-#     timeStruct = time.localtime(timestamp)
-#     return time.strftime('%Y-%m-%d',timeStruct)
-# for dirpath, dirnames, filenames in os.walk(root):
-#     for filepath in filenames:
-#         if str(filepath).endswith(".py"):
-#             str1=str(os.path.join(dirpath, filepath))
-#             list1.append(str1)
-# for i in list1:
-#     dict_time[i]=TimeStampToTime(os.path.getctime(i))
-# for i in list1:
-#     dict_code[i]=int(len(codecs.open(i, 'rU', 'utf-8').readlines()))
-#     #print(dict_code[i])
-# timeset=set(dict_time.values())
-# for i in iter(timeset):
-#     dict_time_code[i]=0
-# for i in iter(timeset):
-#     for j in list1:
-#         if dict_time[j]==i:
-#             dict_time_code[i]+=dict_code[j]
-# for (key,value) in dict_time_code.items():
-#        print(key+':写了'+str(value)+"行代码！")
-# T=True if input("是否显示你的作业(Y/n)")=='Y' else False
-# if T:
-#     print("你的作业文件")
-#     for i in list1:
-#         print(i)
+import time
+import codecs
+import os
+root = r"C:\Users\WPN\PycharmProjects"#root代表你放作业的文件夹
+list1=[]
+dict_time={}
+timeset={}
+dict_code={}
+dict_time_code={}
+def TimeStampToTime(timestamp):
+    timeStruct = time.localtime(timestamp)
+    return time.strftime('%Y-%m-%d',timeStruct)
+for dirpath, dirnames, filenames in os.walk(root):
+    for filepath in filenames:
+        if str(filepath).endswith(".py"):
+            str1=str(os.path.join(dirpath, filepath))
+            list1.append(str1)
+for i in list1:
+    dict_time[i]=TimeStampToTime(os.path.getctime(i))
+for i in list1:
+    dict_code[i]=int(len(codecs.open(i, 'rU', 'utf-8').readlines()))
+    #print(dict_code[i])
+timeset=set(dict_time.values())
+for i in iter(timeset):
+    dict_time_code[i]=0
+for i in iter(timeset):
+    for j in list1:
+        if dict_time[j]==i:
+            dict_time_code[i]+=dict_code[j]
+for (key,value) in dict_time_code.items():
+       print(key+':写了'+str(value)+"行代码！")
+T=True if input("是否显示你的作业(Y/n)")=='Y' else False
+if T:
+    print("你的作业文件")
+    for i in list1:
+        print(i)
 
 
 #监听文件改动
@@ -297,4 +297,3 @@ abaaab
 # print(d.timestamp())
 # print(d.timetuple())
 # print(datetime.date.fromtimestamp(d.timestamp()))
-

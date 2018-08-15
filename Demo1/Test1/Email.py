@@ -4,14 +4,18 @@ from email.utils import formataddr
 
 my_sender = '757201759@qq.com'  # 发件人邮箱账号
 my_pass = 'oyyydzvecacabdeh'  # 发件人邮箱密码
-# my_user = '154167769@qq.com'  # 收件人邮箱账号，我这边发送给自己
-# my_sender = input('邮箱账号：')
-# my_pass = input('邮箱密码:')
-my_user = input('收件人邮箱:')
-email_title = input("邮件标题：\n")
-email_text = input('邮件内容:\n')
-
-
+my_user = ''  # 收件人邮箱账号
+email_title = ''# 邮件标题
+email_text = '' # 邮件内容
+def set_my_user(user):
+    global my_user
+    my_user = user
+def set_email_title(txt):
+    global email_title
+    email_title = txt
+def set_email_text(txt):
+    global email_text
+    email_text = txt
 def mail():
     ret = True
     try:
@@ -28,9 +32,9 @@ def mail():
         ret = False
     return ret
 
-
-ret = mail()
-if ret:
-    print("邮件发送成功")
-else:
-    print("邮件发送失败")
+def run():
+    ret = mail()
+    if ret:
+        print("邮件发送成功")
+    else:
+        print("邮件发送失败")

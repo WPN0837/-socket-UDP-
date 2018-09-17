@@ -1,7 +1,10 @@
 # -socket-UDP-
 基于socket UDP 局域网聊天小软件
+
 服务端文件目录
+
 chat_service
+
            |——bin
            |    |——service.py
            |    

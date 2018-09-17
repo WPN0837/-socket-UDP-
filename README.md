@@ -4,6 +4,7 @@
 服务端文件目录
 
 chat_service
+
            |——bin
            |    |——service.py
            |    
@@ -31,6 +32,7 @@ chat_service
 客户端文件目录
 
 chat_client
+
            |——bin
            |    |——client.py
            |    
